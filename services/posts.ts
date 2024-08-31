@@ -3,7 +3,7 @@ import { axiosInstance } from "./instance"
 
 
 export const posts = async (page?: number, limit?: number ) => {
-    return (await axiosInstance.get('/posts', {params: { page, limit, sortBy:'createdAt', order:'asc'}} )).data;
+    return (await axiosInstance.get('/posts', {params: { page, limit, sortBy:'id', order:'desc'}} )).data;
 }
 
 
