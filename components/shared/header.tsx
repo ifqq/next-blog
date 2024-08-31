@@ -14,9 +14,11 @@ export const Header: React.FC<Props> = ({ className }) => {
             <Container className="flex items-center justify-between py-8">
             <Link href={`/`}>
                 <h1 className="text-2xl uppercase font-black">Next Blog</h1>
-            </Link>
+            </Link >
                     <div className="flex items-center gap-3">
+                    <Link href={`/create-post`}>
                         <Button variant="outline" className="bg-sky-100">Создать пост</Button>
+                        </Link >
                     </div>
             </Container>
        </header>
