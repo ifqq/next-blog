@@ -17,7 +17,9 @@ export const PostCard: React.FC<Props> = ({ id, name, text, imageUrl, className 
             <Link href={`/post/${id}`}>
                 <Title text={name} size="sm" className="mb-5 font-bold hover:text-sky-800"/>
             </Link>
-            <img className='mx-auto  min-h-[480px]' src={imageUrl} alt={name} />
+            <div className="mx-auto h-[480px] w-[640px]">
+                <img className=' object-cover  min-h-[480px]' src={imageUrl} alt={name} />
+            </div>
             <p className="text-sm text-gray-400 line-clamp-5 mt-5">{text}</p>
             <Link href={`/post/${id}`}>
                 <Button variant="default" className="text-base mt-5">Читать далее</Button>
