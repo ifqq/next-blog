@@ -1,7 +1,16 @@
-export default function PostPage() {
+import { Container } from '@/components/shared/container'
+import { Post } from '@/components/shared/Post'
+import { postId } from '@/services/posts';
+
+export default async function PostPage({ params: { id } }: { params: { id: number } }) {
+    const post = await postId(id);
     return (
-        <div>
-            <h1>Post Page</h1>
-        </div>
-    );
+        <Container>
+            <Post 
+                name={post.name}
+                text={post.text}
+                imageUrl={post.imageUrl}
+            />
+        </Container>
+    )
 }
